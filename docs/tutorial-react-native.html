@@ -73,7 +73,7 @@ applications.</p><p>Get a deeper insight into testing a working example React Na
 <span spellcheck="true" class="token comment">// Note: test renderer must be required after react-native.</span>
 <span class="token keyword">import</span> renderer <span class="token keyword">from</span> <span class="token string">&#x27;react-test-renderer&#x27;</span><span class="token punctuation">;</span>
 
-<span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;renders correctly&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">&#x27;renders correctly&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> tree <span class="token operator">=</span> renderer<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>Intro <span class="token operator">/</span><span class="token operator">&gt;</span>
   <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
