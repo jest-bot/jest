@@ -30,7 +30,7 @@ directory as the <code>node_modules</code> folder. Eg:</p><pre class="prism lang
       user<span class="token punctuation">.</span>js
     user<span class="token punctuation">.</span>js
   views
-  config</pre><p>When a manual mock exists for a given module, Jest&#x27;s module system will use that module when explicitly calling <code>jest.mock(&#x27;moduleName&#x27;)</code>.</p><p>Here&#x27;s a contrived example where we have a module that provides a summary of
+  config</pre><p>When a manual mock exists for a given module, Jest&#x27;s module system will use that module when explicitly calling <code>jest.mock(&#x27;moduleName&#x27;)</code>. However, manual mocks will take precedence over node modules even if <code>jest.mock(&#x27;moduleName&#x27;)</code> is not called. To opt out of this behavior you will need to explicitly call <code>jest.unmock(&#x27;moduleName&#x27;)</code> in tests that should use the actual module implementation.</p><p>Here&#x27;s a contrived example where we have a module that provides a summary of
 all the files in a given directory.</p><pre class="prism language-javascript">
 <span spellcheck="true" class="token comment">// FileSummarizer.js</span>
 <span class="token string">&#x27;use strict&#x27;</span><span class="token punctuation">;</span>
